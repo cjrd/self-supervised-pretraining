@@ -1,0 +1,13 @@
+# dataset best-moco-bt best-sup-bt best-no-bt
+bdd 50000 50000 400000
+chest_xray_kids 50000 50000 400000
+chexpert 5000 50000 400000
+coco_2014 50000 50000 400000
+domain_net_clipart 5000 5000 400000
+domain_net_infograph 500 5000 400000 
+domain_net_painting 5000 5000 400000 
+domain_net_real 5000 50 400000 
+domain_net_sketch 5000 50000 400000 
+domain_net_quickdraw 5000 50000 400000 
+resisc 5000 50000 100000
+ucmerced 500 5000 400000

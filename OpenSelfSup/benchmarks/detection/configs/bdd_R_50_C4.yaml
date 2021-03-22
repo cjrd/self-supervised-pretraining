@@ -1,0 +1,13 @@
+_BASE_: "Base-RCNN-C4-BN.yaml"
+MODEL:
+  MASK_ON: False
+  WEIGHTS: ""
+INPUT:
+  MIN_SIZE_TRAIN: (362, 392, 422, 452, 482, 512)
+  MIN_SIZE_TEST: 512
+DATASETS:
+  TRAIN: ("bdd_train",)
+  TEST: ("bdd_val",)
+SOLVER:
+  STEPS: (60000, 80000)
+  MAX_ITER: 90000

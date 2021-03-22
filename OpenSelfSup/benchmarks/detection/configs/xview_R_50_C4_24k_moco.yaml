@@ -1,0 +1,8 @@
+_BASE_: "xview_R_50_C4_2x.yaml"
+MODEL:
+  PIXEL_MEAN: [57.805, 47.77, 38.784]
+  PIXEL_STD: [43.01, 34.611, 31.846]
+  RESNETS:
+    STRIDE_IN_1X1: False
+INPUT:
+  FORMAT: "RGB"

@@ -1,0 +1,13 @@
+_BASE_: "Base-RCNN-C4-BN.yaml"
+MODEL:
+  MASK_ON: True
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+INPUT:
+  MIN_SIZE_TRAIN: (224, 256, 312, 400, 512)
+  MIN_SIZE_TEST: 512
+DATASETS:
+  TRAIN: ("xview_train",)
+  TEST: ("xview_val",)
+SOLVER:
+  STEPS: (120000, 160000)
+  MAX_ITER: 180000
