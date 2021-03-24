@@ -25,8 +25,6 @@ pip install -v -e .
 ## Data installation
 
 The data you need will depend on your goals, but generally speaking, download the RESISC-45 dataset to make sure you have everything working correctly.
-Note: if you're working on millenium, blaze, or b3 machines, most of these datasets are already setup and the symlinks are in the repo.
-If you're not on these machines, you'll need to download the datasets and update the symlinks. These instructions will help get you there.
 
 ### Pretrained Models
 ``` shell
@@ -131,7 +129,7 @@ OpenSelfSup/configs/hpt-pretrain/${shortname}
 ```
 
 
-Congratulations: you've launch a full hierarchical pretraining experiment. Chat with Colorado about analyzing/refining/etc your results.
+Congratulations: you've launch a full hierarchical pretraining experiment. 
 
 **FAQs/PROBLEMS?**
 * How does `pretrain-runner.sh` keep track of what's been pretrained?
@@ -204,7 +202,7 @@ export basetrain_weights=(
 ```
 (see `resisc-ucmerced.sh` for an example)
 
-To select which backbones to use, evaluate the linear performance from the various source outputs (e.g. all the resisc pretrained outputs) on the target data (e.g. on uc-merced data). Chat with Xiangyu or Colorado if this isn't clear.
+To select which backbones to use, evaluate the linear performance from the various source outputs (e.g. all the resisc pretrained outputs) on the target data (e.g. on uc-merced data). 
 
 Then simply generate the project and execute the pretraining as normal:
 
@@ -269,18 +267,18 @@ You can verify the results in `results` and then add the new/updated results fil
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Please investigate as your results may not be complete.
-(see errors in file: /home/cjrd/base-training/utils/tmp/errors.txt)
+(see errors in file: base-training/utils/tmp/errors.txt)
 
-will not include partial result for /home/cjrd/base-training/utils/../OpenSelfSup/work_dirs/hpt-pretrain/resisc/finetune/1000-labels/imagenet_r50_supervised_basetrain/50000-iters-2500-iter-0_01-lr-finetune/20200911_170916.log.json
+will not include partial result for base-training/utils/../OpenSelfSup/work_dirs/hpt-pretrain/resisc/finetune/1000-labels/imagenet_r50_supervised_basetrain/50000-iters-2500-iter-0_01-lr-finetune/20200911_170916.log.json
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ```
-This means that this particular evaluation run did not appear to run for enough iterations. Investigate the provided log file, rerun any necessary evaluations, and remove the offending log file. Contact Colorado if this log file fully completed a run and you received this message in error.
+This means that this particular evaluation run did not appear to run for enough iterations. Investigate the provided log file, rerun any necessary evaluations, and remove the offending log file.
 
 **Debugging this script** this script finds the top val accuracy, and save the corresponding test accuracy using the following script:
 ```
 ./utils/agg-results.sh
 ```
-which outputs results to `utils/tmp/results.txt` and errors to `utils/tmp/errors.txt`. Look at this file if your results aren't being generated correctly and/or ask Colorado for assistence =).
+which outputs results to `utils/tmp/results.txt` and errors to `utils/tmp/errors.txt`. Look at this file if your results aren't being generated correctly.
 
 ## Generate plots
 
@@ -299,30 +297,19 @@ cd utils
 python plot.py --fname PLOT_NAME --folder FOLDER_CONTAINING_DIFFERENT_.PTH_FOLDERs
 ```
 
-**To Generate plot for Exp-2-finetuning**, do
+**To Generate plot for full finetuning**, do
 ```bash
 bash utils/plot-results-exp-2.sh
 ```
 
 See plot in directory `plot-results/exp-2`.
 
-**To Generate plot for Exp-3-Hierarchical Pretraining**, do
+**To Generate plot for HPT Pretraining**, do
 ```bash
 bash utils/plot-results-exp-3.sh
 ```
 
 See plot in directory `plot-results/exp-3`.
-
-**To Generate Text (similar to what in the [Google Doc](https://docs.google.com/document/d/1W1-Mfgk8ymBFbAy67_FZ9widTRKpXbbt7ttgS_QEqoI/edit))**, do
-```bash
-bash utils/print-google_doc-results-exp-3.sh
-```
-
-See result in directory `results/google_doc_result.txt`.
-
-## Sharing Results
-
-Share results here: https://docs.google.com/spreadsheets/d/1P5c5OWXcm0gyoKj0fjLeMUb2dD_ZNtdmJfK5yBVFr-4/edit?usp=sharing
 
 
 ## Getting activations for similarity measures
