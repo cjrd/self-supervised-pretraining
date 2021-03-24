@@ -1,7 +1,8 @@
 # Hierarchical Pretraining: Research Repository
 
-This is a research repository for the Base Training (pretraining pretraining) project.
-See [this document](https://docs.google.com/document/d/19nT2vaerE-vQ_v_0-m9rRue1y0RRQ3q0fNE8qc96KFs/edit?usp=sharing) for more details.
+This is a research repository for reproducing the results from the project "Self-supervised pretraining improves self-supervised pretraining."
+You can find the arXiv prepint here: https://arxiv.org/abs/2103.12718
+
 
 ## Installation
 ```
