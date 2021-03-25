@@ -3,6 +3,15 @@
 This is a research repository for reproducing the results from the project "Self-supervised pretraining improves self-supervised pretraining."
 You can find the arXiv prepint here: https://arxiv.org/abs/2103.12718
 
+```
+@article{reed2021self,
+  title={Self-supervised pretraining improves self-supervised pretraining.},
+  author={Reed, Colorado J and Yue, Xiangyu and Nrusimha, Ani and Ebrahimi, Sayna and Vijaykumar, Vivek and Mao, Richard and Li, Bo and Zhang, Shanghang and Guillory, Devin and Metzger, Sean and Keutzer, Kurt and Darrell, Trevor},
+  journal={arXiv preprint arXiv:2103.12718},
+  year={2021}
+}
+```
+
 
 ## Installation
 ```
