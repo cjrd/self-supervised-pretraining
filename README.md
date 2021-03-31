@@ -13,6 +13,20 @@ You can find the arXiv prepint here: https://arxiv.org/abs/2103.12718
 ```
 
 
+## Pretrained Models
+Note: we are currently adding many more pretrained models to this table. 
+
+
+### ResNet-50
+
+| Pretraining Algorithm               | Pretraining Data | Pretraining Amount     | Type       | Notes                                                                                                                                                                                                 | Model URL                                                                                                                            |
+| ------------------ | ---------------- | --- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| MoCo-v2   | ImageNet         | 200 ep     | Pytorch    | 67.7% ImageNet Top-1. [codebase](https://github.com/facebookresearch/moco) - [paper](https://arxiv.org/abs/2003.04297)                                                         | [download](https://dl.fbaipublicfiles.com/moco/moco_checkpoints/moco_v2_200ep/moco_v2_200ep_pretrain.pth.tar)                        |
+| MoCo-v2-800   | ImageNet         | 800 ep    | Pytorch    | 71.1% ImageNet Top-1. [codebase](https://github.com/facebookresearch/moco) - [paper](https://arxiv.org/abs/2003.04297)                                                         | [download](https://dl.fbaipublicfiles.com/moco/moco_checkpoints/moco_v2_800ep/moco_v2_800ep_pretrain.pth.tar)                        |
+| SimCLR-v1 | ImageNet         | 800 ep    | Tensorflow | 69.1% ImageNet Top-1. [codebase](https://github.com/google-research/simclr) - [paper](https://arxiv.org/abs/2002.05709)                                                        | [download](https://storage.cloud.google.com/simclr-gcs/checkpoints/ResNet50_1x.zip)                                                  |
+| SimCLR-v2 | ImageNet         | 800 ep    | Tensorflow | 71.7% ImageNet Top-1. [codebase](https://github.com/google-research/simclr) - [paper](https://console.cloud.google.com/storage/browser/simclr-checkpoints/simclrv2/pretrained) | [Google Storage (r50_1x_sk0/model.ckpt...)](https://console.cloud.google.com/storage/browser/simclr-checkpoints/simclrv2/pretrained) |
+
+
 ## Installation
 ```
 # repo
